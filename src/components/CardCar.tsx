@@ -1,13 +1,4 @@
-import {
-  Card,
-  CardContent,
-  Text,
-  Spacer,
-  Flex,
-  Row,
-  Link,
-  Block,
-} from "vcc-ui";
+import { Text, Spacer, Flex, Link } from "vcc-ui";
 import { Car } from "../types/car.interface";
 import Image from "next/image";
 import styles from "../../public/css/CardCar.module.css";
@@ -18,7 +9,7 @@ interface CardProps {
 
 export const CardCar = ({ car }: CardProps) => {
   return (
-    <Flex>
+    <div className={styles.container}>
       <div className={styles.CardCarStyle}>
         <Text variant="bates" subStyle="emphasis">
           {car?.bodyType}
@@ -39,7 +30,7 @@ export const CardCar = ({ car }: CardProps) => {
         />
 
         <Spacer />
-        <Flex extend={{ flexDirection: "row", alignSelf: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <Link href="https://www.volvocars.com/" arrow="right">
             LEARN
           </Link>
@@ -47,8 +38,8 @@ export const CardCar = ({ car }: CardProps) => {
           <Link href="https://www.volvocars.com/" arrow="right">
             SHOP
           </Link>
-        </Flex>
+        </div>
       </div>
-    </Flex>
+    </div>
   );
 };

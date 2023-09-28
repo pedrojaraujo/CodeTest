@@ -1,3 +1,7 @@
+.container {
+  display: flex;
+}
+
 .CardCarStyle {
   width: 300px;
 }
